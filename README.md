@@ -64,4 +64,7 @@ O sistema consta com uma página que calcula seu IMC utilizando seu peso e sua a
 
 - Como usuário, quero receber dicas de como melhorar meu IMC
 
+
+Pericles
+
 ---
