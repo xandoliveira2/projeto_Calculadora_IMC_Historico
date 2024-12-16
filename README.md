@@ -6,23 +6,23 @@ Este é um projeto simples de calculadora IMC em Laravel usado para demonstrar u
 
 ## Nomes dos integrantes
 
-Taís Vidotto
-Victor Chagas
-Alexandre Oliveira
-Gustavo Fonseca
-Marília Godoy
-Rodrigo de Almeida
+- Taís Vidotto
+- Victor Chagas
+- Alexandre Oliveira
+- Gustavo Fonseca
+- Marília Godoy
+- Rodrigo de Almeida
 
 ---
 
 ## Tecnologias utilizadas
 
-Git
-Github
-Laravel
-MYSQL Workbench
-CSS
-JavaScript
+- Git
+- Github
+- Laravel
+- MYSQL Workbench
+- CSS
+- JavaScript
 
 ---
 
