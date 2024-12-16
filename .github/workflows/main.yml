@@ -1,0 +1,21 @@
+name: Validate Pull Request Source Branch
+
+on:
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  check-pr-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Check PR source branch
+        run: |
+          if [[ "${{ github.head_ref }}" != "dev" ]]; then
+            echo "ERRO: Apenas pull requests da branch 'dev' são permitidas para a branch 'main' ."
+            exit 1
+          fi
