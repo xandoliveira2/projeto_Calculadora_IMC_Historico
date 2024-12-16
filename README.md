@@ -6,23 +6,23 @@ Este é um projeto simples de calculadora IMC em Laravel usado para demonstrar u
 
 ## Nomes dos integrantes
 
-Taís Vidotto
-Victor Chagas
-Alexandre Oliveira
-Gustavo Fonseca
-Marília Godoy
-Rodrigo de Almeida
+- Taís Vidotto
+- Victor Chagas
+- Alexandre Oliveira
+- Gustavo Fonseca
+- Marília Godoy
+- Rodrigo de Almeida
 
 ---
 
 ## Tecnologias utilizadas
 
-Git
-Github
-Laravel
-MYSQL Workbench
-CSS
-JavaScript
+- Git
+- Github
+- Laravel
+- MYSQL Workbench
+- CSS
+- JavaScript
 
 ---
 
@@ -54,16 +54,16 @@ O sistema consta com uma página que calcula seu IMC utilizando seu peso e sua a
 
 ## Histórias de usuários
 
- - Como usuário, gostaira de calcular meu IMC, para entender meu índice de massa corporal
+ - Como usuário, gostaria de calcular meu IMC, para entender meu índice de massa corporal - Alexandre
 
- - Como um usuário, eu quero salvar meu resultado, para acompanhar meu histórico
+ - Como um usuário, eu quero salvar meu resultado, para acompanhar meu histórico - Gustavo
 
- - Como um usuário, eu quero visualizar um histórico dos meus cálculos, para monitorar meu progresso
+ - Como um usuário, eu quero visualizar um histórico dos meus cálculos, para monitorar meu progresso - Marília
 
-- Como um usuário, eu quero excluir um registro
+- Como um usuário, eu quero excluir um registro - Rodrigo
 
-- Como usuário, quero receber dicas de como melhorar meu IMC
+- Como usuário, quero receber dicas de como melhorar meu IMC - Taís
 
-
+- Como usuário, gostaria de saber qual é a minha classificação de IMC - Victor
 
 ---
