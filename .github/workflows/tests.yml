@@ -1,0 +1,36 @@
+name: Verificação de Código
+
+on:
+  push:
+    branches:
+      - tests
+  pull_request:
+    branches:
+      - tests
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # ou a versão do Node.js que você usa
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Rodar testes
+      run: node test.js  # Aqui estamos executando o arquivo de teste diretamente
+
+    - name: Package project
+      run: zip -r calculadoraimc.zip .
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        -name: calculadora-artifact
+        path: calculadoraimc.zip
