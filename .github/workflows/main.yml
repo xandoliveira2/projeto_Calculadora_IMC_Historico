@@ -53,6 +53,11 @@ jobs:
           php-version: '8.2'
           extensions: mbstring, bcmath, curl, tokenizer, xml
 
+      - name: Verify .env.example exists
+        run: |
+          echo "Verificando arquivos na raiz do projeto:"
+          ls -la
+
       - name: Set up .env file for testing
         run: |
           cp .env.example .env
