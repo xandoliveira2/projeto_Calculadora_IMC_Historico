@@ -27,10 +27,10 @@ jobs:
       - name: Install Dependencies
         run: |
           composer install --no-interaction --prefer-dist --verbose
-          echo "Conteúdo da raiz do projeto após composer install:"
+          echo "Conteúdo do diretório raiz após composer install:"
           ls -la
           echo "Conteúdo do diretório 'vendor':"
-          ls -la vendor || echo "Diretório 'vendor' não encontrado."
+          ls -la vendor || echo "Diretório 'vendor' não encontrado. Dependências não foram instaladas corretamente."
 
       - name: Check PR source branch
         run: |
@@ -53,10 +53,17 @@ jobs:
           php-version: '8.2'
           extensions: mbstring, bcmath, curl, tokenizer, xml
 
-      - name: Verify .env.example exists
+      - name: Verify Vendor Directory
         run: |
-          echo "Verificando arquivos na raiz do projeto:"
-          ls -la
+          echo "Verificando diretório 'vendor':"
+          ls -la vendor || echo "Diretório 'vendor' não encontrado."
+
+      - name: Check .env.example file
+        run: |
+          if [ ! -f .env.example ]; then
+            echo "Erro: O arquivo .env.example não existe no repositório."
+            exit 1
+          fi
 
       - name: Set up .env file for testing
         run: |
