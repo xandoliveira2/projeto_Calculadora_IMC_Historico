@@ -54,15 +54,15 @@ O sistema consta com uma página que calcula seu IMC utilizando seu peso e sua a
 
 ## Histórias de usuários
 
- - Como usuário, gostaria de calcular meu IMC, para entender meu índice de massa corporal - Alexandre
+ - Como usuário, gostaria de calcular meu IMC, para entender meu índice de massa corporal - Gustavo
 
- - Como um usuário, eu quero salvar meu resultado, para acompanhar meu histórico - Gustavo
+ - Como um usuário, eu quero salvar meu resultado, para acompanhar meu histórico - Taís
 
- - Como um usuário, eu quero visualizar um histórico dos meus cálculos, para monitorar meu progresso - Marília
+ - Como um usuário, eu quero visualizar um histórico dos meus cálculos, para monitorar meu progresso - Rodrigo
 
-- Como um usuário, eu quero excluir um registro - Rodrigo
+- Como um usuário, eu quero excluir um registro - Marilia
 
-- Como usuário, quero receber dicas de como melhorar meu IMC - Taís
+- Como usuário, quero receber dicas de como melhorar meu IMC - Alexandre
 
 - Como usuário, gostaria de saber qual é a minha classificação de IMC - Victor
 
