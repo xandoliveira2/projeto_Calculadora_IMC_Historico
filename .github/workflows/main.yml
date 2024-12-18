@@ -13,10 +13,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2  # Faz o checkout do código para a máquina de CI
 
+      - name: Set up PHP 8.2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'  # Define a versão do PHP para 8.2
+
+      - name: Install Dependencies
+        run: |
+          composer install --no-interaction --prefer-dist  # Instala as dependências do Composer
+
       - name: Check PR source branch
         run: |
           if [[ "${{ github.head_ref }}" != "dev" ]]; then
-            echo "ERRO: Apenas pull requests da branch 'dev' são permitidas para a branch 'main'."
+            echo "ERRO: Apenas pull requests da branch 'dev' são permitidos."
             exit 1  # Encerra o processo caso a branch não seja 'dev'
           fi
 
@@ -29,16 +38,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2  # Faz o checkout do código para o ambiente de execução
 
-      - name: Set up PHP
+      - name: Set up PHP 8.2
         uses: shivammathur/setup-php@v2  # Configura o PHP
         with:
-          php-version: '8.1'  # Defina a versão do PHP que está usando
+          php-version: '8.2'  # Defina a versão do PHP para 8.2
           extensions: mbstring, bcmath, curl  # Extensões necessárias para Laravel
           coverage: xdebug  # Ativa o Xdebug para cobertura de testes (opcional)
-
-      - name: Install Dependencies
-        run: |
-          composer install --no-interaction --prefer-dist  # Instala as dependências do Composer
 
       - name: Set up .env file for testing
         run: |
