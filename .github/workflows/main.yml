@@ -18,21 +18,19 @@ jobs:
         with:
           php-version: '8.2'
 
-      - name: Clear Composer Cache
-        run: composer clear-cache
-
       - name: Cache Composer Dependencies
         uses: actions/cache@v2
         with:
-          path: ~/.composer/cache
+          path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
 
       - name: Install Dependencies
         run: |
-          composer install --no-interaction --prefer-dist
-          ls -la vendor  # Verifica se o diretório vendor foi gerado
+          composer install --no-interaction --prefer-dist --verbose
+          ls -la
+          ls -la vendor
 
       - name: Check PR source branch
         run: |
